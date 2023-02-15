@@ -59,4 +59,16 @@ export class AppComponent {
   // firstNumber = '' ;
   // secondNumber = '';
   // sum = this.firstNumber + this.secondNumber;
+  badmintonStars = {
+    userId : 20,
+    firstName : 'Venkata Sindhu',
+    lastname : 'Pusarla',
+    dob : '08/05/1995'
+  }
+
+  user1 = {
+    firstName : 'Sid Sriram',
+    city :'Berkeley',
+    cityCode :'BK'
+  }
 }

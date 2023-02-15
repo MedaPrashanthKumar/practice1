@@ -89,6 +89,34 @@
 <!-- <input [(ngModel)]="secondNumber">
 <h1>{{sum}}</h1> -->
 
- 
+<!-- Pipes -->
+<!-- Built in Pipes -->
+ <div>
+    {{badmintonStars.firstName  | uppercase}}     {{badmintonStars.lastname | lowercase}} 
+ </div> 
 
+ <div>
+    {{badmintonStars.dob | date}}  <b>{{6589.23 | currency:"INR"}}</b><br/>  
+ </div>
+<br>
+ <div>
+    {{badmintonStars | json}} 
+ </div>
+
+ <br>
+
+ <div>
+    {{badmintonStars.dob | date:'fullTime'}}
+ </div>
+
+ <div>
+    {{badmintonStars.dob | date:'MMMM'| uppercase}}
+ </div>
+<!-- Example of Custom Pipe -->
+ <!-- <div>
+    {{user1.city | highlight:user1.city}}
+ </div> -->
+ <div [innerHTML]="user1.city">
+
+ </div>
 <router-outlet></router-outlet>
