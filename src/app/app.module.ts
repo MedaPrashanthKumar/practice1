@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { TodoModule } from './todo/todo.module';
 import { HighlightPipe } from './highlight.pipe';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { HighlightPipe } from './highlight.pipe';
     AppRoutingModule,
     TodoModule
   ],
-  providers: [],
+  providers: [
+    {provide:LocationStrategy,useClass:HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
